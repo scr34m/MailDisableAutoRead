@@ -3,11 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 53;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		61953DFB2701B03000B2132A /* MailDisableAutoRead.m in Sources */ = {isa = PBXBuildFile; fileRef = 61953DFA2701B03000B2132A /* MailDisableAutoRead.m */; };
+		61953DFE2701B08700B2132A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61953DFD2701B08700B2132A /* Info.plist */; };
+		61953E032701B11000B2132A /* MailHeaders in Resources */ = {isa = PBXBuildFile; fileRef = 61953E022701B11000B2132A /* MailHeaders */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		61953DF22701AF3600B2132A /* MailDisableAutoRead.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MailDisableAutoRead.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		61953DF22701AF3600B2132A /* MailDisableAutoRead.mailbundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MailDisableAutoRead.mailbundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		61953DF92701B03000B2132A /* MailDisableAutoRead.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MailDisableAutoRead.h; sourceTree = "<group>"; };
+		61953DFA2701B03000B2132A /* MailDisableAutoRead.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MailDisableAutoRead.m; sourceTree = "<group>"; };
+		61953DFD2701B08700B2132A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61953E022701B11000B2132A /* MailHeaders */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MailHeaders; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +34,8 @@
 		61953DE92701AF3600B2132A = {
 			isa = PBXGroup;
 			children = (
+				61953E022701B11000B2132A /* MailHeaders */,
+				61953DFC2701B05600B2132A /* MailDisableAutoRead */,
 				61953DF32701AF3600B2132A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -31,9 +43,19 @@
 		61953DF32701AF3600B2132A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				61953DF22701AF3600B2132A /* MailDisableAutoRead.bundle */,
+				61953DF22701AF3600B2132A /* MailDisableAutoRead.mailbundle */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		61953DFC2701B05600B2132A /* MailDisableAutoRead */ = {
+			isa = PBXGroup;
+			children = (
+				61953DFD2701B08700B2132A /* Info.plist */,
+				61953DF92701B03000B2132A /* MailDisableAutoRead.h */,
+				61953DFA2701B03000B2132A /* MailDisableAutoRead.m */,
+			);
+			path = MailDisableAutoRead;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -53,7 +75,7 @@
 			);
 			name = MailDisableAutoRead;
 			productName = MailDisableAutoRead;
-			productReference = 61953DF22701AF3600B2132A /* MailDisableAutoRead.bundle */;
+			productReference = 61953DF22701AF3600B2132A /* MailDisableAutoRead.mailbundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -71,7 +93,7 @@
 				};
 			};
 			buildConfigurationList = 61953DED2701AF3600B2132A /* Build configuration list for PBXProject "MailDisableAutoRead" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -93,6 +115,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61953E032701B11000B2132A /* MailHeaders in Resources */,
+				61953DFE2701B08700B2132A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61953DFB2701B03000B2132A /* MailDisableAutoRead.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,11 +248,14 @@
 		61953DF72701AF3600B2132A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DRRDUBQ4YF;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				HEADER_SEARCH_PATHS = "MailHeaders/**";
+				INFOPLIST_FILE = MailDisableAutoRead/info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
@@ -236,18 +264,21 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = mailbundle;
 			};
 			name = Debug;
 		};
 		61953DF82701AF3600B2132A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DRRDUBQ4YF;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				HEADER_SEARCH_PATHS = "MailHeaders/**";
+				INFOPLIST_FILE = MailDisableAutoRead/info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
@@ -256,7 +287,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = mailbundle;
 			};
 			name = Release;
 		};
