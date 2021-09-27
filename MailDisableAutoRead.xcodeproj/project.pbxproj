@@ -10,6 +10,9 @@
 		61953DFB2701B03000B2132A /* MailDisableAutoRead.m in Sources */ = {isa = PBXBuildFile; fileRef = 61953DFA2701B03000B2132A /* MailDisableAutoRead.m */; };
 		61953DFE2701B08700B2132A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61953DFD2701B08700B2132A /* Info.plist */; };
 		61953E032701B11000B2132A /* MailHeaders in Resources */ = {isa = PBXBuildFile; fileRef = 61953E022701B11000B2132A /* MailHeaders */; };
+		61953E062701B5D800B2132A /* MFMessageContext+MailDisableAutoRead.m in Sources */ = {isa = PBXBuildFile; fileRef = 61953E052701B5D800B2132A /* MFMessageContext+MailDisableAutoRead.m */; };
+		61953E092701B62200B2132A /* JRLPSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 61953E082701B62200B2132A /* JRLPSwizzle.m */; };
+		61953E0C2701B64500B2132A /* CodeInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 61953E0B2701B64500B2132A /* CodeInjector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +21,12 @@
 		61953DFA2701B03000B2132A /* MailDisableAutoRead.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MailDisableAutoRead.m; sourceTree = "<group>"; };
 		61953DFD2701B08700B2132A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61953E022701B11000B2132A /* MailHeaders */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MailHeaders; sourceTree = "<group>"; };
+		61953E042701B5D800B2132A /* MFMessageContext+MailDisableAutoRead.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFMessageContext+MailDisableAutoRead.h"; sourceTree = "<group>"; };
+		61953E052701B5D800B2132A /* MFMessageContext+MailDisableAutoRead.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MFMessageContext+MailDisableAutoRead.m"; sourceTree = "<group>"; };
+		61953E072701B62200B2132A /* JRLPSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRLPSwizzle.h; sourceTree = "<group>"; };
+		61953E082701B62200B2132A /* JRLPSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRLPSwizzle.m; sourceTree = "<group>"; };
+		61953E0A2701B64500B2132A /* CodeInjector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeInjector.h; sourceTree = "<group>"; };
+		61953E0B2701B64500B2132A /* CodeInjector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeInjector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +63,12 @@
 				61953DFD2701B08700B2132A /* Info.plist */,
 				61953DF92701B03000B2132A /* MailDisableAutoRead.h */,
 				61953DFA2701B03000B2132A /* MailDisableAutoRead.m */,
+				61953E042701B5D800B2132A /* MFMessageContext+MailDisableAutoRead.h */,
+				61953E052701B5D800B2132A /* MFMessageContext+MailDisableAutoRead.m */,
+				61953E072701B62200B2132A /* JRLPSwizzle.h */,
+				61953E082701B62200B2132A /* JRLPSwizzle.m */,
+				61953E0A2701B64500B2132A /* CodeInjector.h */,
+				61953E0B2701B64500B2132A /* CodeInjector.m */,
 			);
 			path = MailDisableAutoRead;
 			sourceTree = "<group>";
@@ -127,7 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61953E092701B62200B2132A /* JRLPSwizzle.m in Sources */,
 				61953DFB2701B03000B2132A /* MailDisableAutoRead.m in Sources */,
+				61953E0C2701B64500B2132A /* CodeInjector.m in Sources */,
+				61953E062701B5D800B2132A /* MFMessageContext+MailDisableAutoRead.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

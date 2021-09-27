@@ -9,8 +9,12 @@
 #import <objc/objc-runtime.h>
 #import "MailDisableAutoRead.h"
 #import "MVMailBundle.h"
+#import "CodeInjector.h"
 
 @implementation MailDisableAutoRead
+
+// TODO use sharedInstance!?
+BOOL calledContext;
 
 + (void)initialize {
     if(self != [MailDisableAutoRead class])
@@ -25,7 +29,8 @@
     class_setSuperclass([self class], mvMailBundleClass);
 #pragma GCC diagnostic pop
     
-    MailDisableAutoRead *instance = [MailDisableAutoRead sharedInstance];
+    // Initialize the bundle by swizzling methods, loading keys, ...
+    [MailDisableAutoRead sharedInstance];
     
     [[((MVMailBundle *)self) class] registerBundle];
 }
@@ -37,8 +42,19 @@
 - (id)init {
     if (self = [super init]) {
         NSLog(@"Loaded MailDisableAutoRead %@", [self version]);
+        [CodeInjector injectUsingMethodPrefix:@"MPP"];
     }
     return self;
+}
+
++ (void)setCalledContext: (BOOL)state
+{
+    calledContext = state;
+}
+
++ (BOOL)getCalledContext
+{
+    return calledContext;
 }
 
 @end

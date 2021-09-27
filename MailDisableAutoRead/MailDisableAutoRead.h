@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 
 @interface MailDisableAutoRead : NSObject
++ (void)setCalledContext: (BOOL)state;
++ (BOOL)getCalledContext;
 @end
 
 @interface MailDisableAutoRead (NoImplementation)
