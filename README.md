@@ -3,7 +3,7 @@ MailDisableAutoRead
 
 Mail Disable Auto Read blocks Mail.app to mark message readed, to change read flag state the contextual menu needs to be used.
 
-Latest supported version is macOS Monterey (12.1) Mail 15.0 (3693.40.0.1.81)
+Latest supported version is macOS Monterey (12.2) Mail 15.0 (3693.60.0.1.1)
 
 Install
 -------
