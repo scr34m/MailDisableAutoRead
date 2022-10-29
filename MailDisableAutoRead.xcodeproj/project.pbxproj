@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		61953DFB2701B03000B2132A /* MailDisableAutoRead.m in Sources */ = {isa = PBXBuildFile; fileRef = 61953DFA2701B03000B2132A /* MailDisableAutoRead.m */; };
 		61953DFE2701B08700B2132A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61953DFD2701B08700B2132A /* Info.plist */; };
-		61953E032701B11000B2132A /* MailHeaders in Resources */ = {isa = PBXBuildFile; fileRef = 61953E022701B11000B2132A /* MailHeaders */; };
 		61953E062701B5D800B2132A /* MFMessageContext+MailDisableAutoRead.m in Sources */ = {isa = PBXBuildFile; fileRef = 61953E052701B5D800B2132A /* MFMessageContext+MailDisableAutoRead.m */; };
 		61953E092701B62200B2132A /* JRLPSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 61953E082701B62200B2132A /* JRLPSwizzle.m */; };
 		61953E0C2701B64500B2132A /* CodeInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 61953E0B2701B64500B2132A /* CodeInjector.m */; };
@@ -130,7 +129,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61953E032701B11000B2132A /* MailHeaders in Resources */,
 				61953DFE2701B08700B2132A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
