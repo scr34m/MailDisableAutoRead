@@ -36,7 +36,7 @@ BOOL calledContext;
 }
 
 - (NSString *)version {
-    return @"0.1.7";
+    return @"0.1.9";
 }
 
 - (id)init {
